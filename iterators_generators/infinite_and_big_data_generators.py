@@ -37,3 +37,23 @@ print(current_pattern.__next__())
 print(current_pattern.__next__())
 print(current_pattern.__next__())
 
+# HOMEWORK
+"""Создайте функцию, возвращающую генератор, бесконечно вырабатывающий квадраты целых чисел, начиная с 1.
+infinite_square_generator = get_infinite_square_generator()
+print(next(infinite_square_generator)) # 1
+print(next(infinite_square_generator)) # 4
+print(next(infinite_square_generator)) # 9
+print(next(infinite_square_generator)) # 16"""
+def get_infinite_square_generator():
+    i = 0
+    while True:
+        yield i ** 2
+        i += 1
+
+generator = get_infinite_square_generator()
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
